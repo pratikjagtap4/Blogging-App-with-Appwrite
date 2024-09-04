@@ -1,6 +1,7 @@
 import React from 'react'
 import { Controller } from 'react-hook-form'
 import { Editor } from '@tinymce/tinymce-react';
+import MDEditor from '@uiw/react-md-editor';
 
 function RTE({ name, label, control, defaultValue = "" }) {
 
@@ -8,7 +9,7 @@ function RTE({ name, label, control, defaultValue = "" }) {
         <div className='w-full'>
             {label && <label className='inline-block mb-1pl-1'>{label}</label>}
 
-            <Controller
+            {/* <Controller
                 name={name || "content"}
                 control={control}
                 render={({ field: { onChange } }) => (
@@ -46,6 +47,17 @@ function RTE({ name, label, control, defaultValue = "" }) {
                         }
                         }
                         onEditorChange={onChange}
+                    />
+                )}
+            /> */}
+
+            < Controller
+                name={name || "content"}
+                control={control}
+                render={({ field }) => (
+                    <MDEditor
+                        value={field.value}
+                        onChange={field.onChange}
                     />
                 )}
             />
@@ -91,3 +103,17 @@ export default RTE
 // ->
 //      The render function inside the Controller allows you to customize how the form's state management is tied to the custom input's behavior.
 // For example, TinyMCE uses onEditorChange to detect changes in its content.This is different from a standard < input >, which uses onChange.The custom render function lets you map onEditorChange to react - hook - form's onChange so that the form state is updated correctly.
+
+
+
+
+//     < Controller
+// name = 'requirements'
+// control = { control }
+// render = {({ field }) => (
+//     <MDEditor
+//         value={field.value}
+//         onChange={field.onChange}
+//     />
+// )}
+//         />

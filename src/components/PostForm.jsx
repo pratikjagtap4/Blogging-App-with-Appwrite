@@ -72,7 +72,7 @@ function PostForm({ post }) {
 
     return (
         <form onSubmit={handleSubmit(submit)} className='flex flex-wrap'>
-            <div className='w-2/3 px-10 mt-5'>
+            <div className='sm:w-2/3 px-10 mt-5'>
                 <Input
                     label="title"
                     placeholder="Post title"
@@ -100,7 +100,7 @@ function PostForm({ post }) {
                     control={control}
                 />
             </div>
-            <div className='w-1/3 pr-10 mt-5'>
+            <div className='sm:w-1/3 pr-10 mt-5'>
                 <Input
                     label="Featured Image :"
                     type="file"

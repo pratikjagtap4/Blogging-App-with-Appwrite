@@ -9,7 +9,7 @@ function PostCard({ $id, title, featuredImage }) {
     return (
         <Link to={`/post/${$id}`}>
 
-            <div className='w-1/3 bg-gray-100 rounded-xl p-4 mx-auto my-2'>
+            <div className='sm:w-1/3 bg-gray-100 rounded-xl p-4 mx-auto my-2'>
                 <div className='w-full justify-center mb-4'>
                     <img src={storageServices.filePreview(featuredImage)} className="rounded-lg" alt="" />
                     {userData && <p className='text-sm mr-12 pr-12'> {userData.name}</p>}

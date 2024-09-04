@@ -38,7 +38,7 @@ function Header() {
         <header className='py-3 shadow bg-white-50'>
             <Container>
                 <nav className='flex justify-between'>
-                    <div className='ml-20'>
+                    <div className='sm:ml-20'>
                         <Link>
                             <Logo width='50px' />
                         </Link>
@@ -51,7 +51,7 @@ function Header() {
                                         <NavLink
                                             to={`${item.slug}`}
                                             className={({ isActive }) =>
-                                                `block pr-4 pl-3 duration-200 ${isActive ? "text-black-900  border-b-2 border-black/60" : "text-gray-700"}   hover:text-orange-600  hover:border-b-2 mx-3`
+                                                `block sm:pr-4 sm:pl-3 duration-200 ${isActive ? "text-black-900  border-b-2 border-black/60" : "text-gray-700"}   hover:text-orange-600  hover:border-b-2 mx-3`
                                             }
                                         >
                                             {item.name}
